@@ -66,7 +66,6 @@ public class Raycaster : MonoBehaviour
         if (other.gameObject.CompareTag("Options"))
         {
             OptionsCanvas.SetActive(true);
-            isTouching = true;
         }
 
         if (other.gameObject.CompareTag("Exit"))
@@ -83,10 +82,7 @@ public class Raycaster : MonoBehaviour
 
     public void PlayGame()
     {
-        if (sceneDestinationName != "")
-        {
-            SceneManager.LoadScene(sceneDestinationName);
-        }
+        SceneManager.LoadScene("PSF");
     }
 
     public void Exit()
